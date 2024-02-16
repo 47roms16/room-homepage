@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Room homepage | Frontend Mentor</title>
+  </head>
+  <body
+    class="flex flex-col items-center justify-center bg-gray-500 font-league-spartan"
+  >
+    <main>
+      <section class="max-container | grid grid-cols-12 max-lg:block">
+        <div class="relative col-start-1 col-span-7">
+          <header
+            class="absolute w-full py-11 px-16 max-lg:py-10 max-lg:px-5 text-white z-10"
+          >
+            <nav class="relative flex items-center gap-14">
+              <button id="hamburger-menu" class="absolute top-[1px] z-50">
+                <svg
+                  id="hamburger-icon"
+                  class="icon | lg:hidden size-6 max-lg:size-5"
+                >
+                  <use xlink:href="images/icons.svg#icon-hamburger"></use>
+                </svg>
+                <svg
+                  id="close-icon"
+                  class="icon | hidden lg:hidden size-6 max-lg:size-5"
+                >
+                  <use xlink:href="images/icons.svg#icon-close"></use>
+                </svg>
+              </button>
+              <a
+                class="max-lg:absolute -bottom-11 left-1/2 -translate-x-1/2"
+                href="/"
+              >
+                <svg class="icon | size-16">
+                  <use xlink:href="images/logo.svg#logo"></use>
+                </svg>
+              </a>
+              <ul class="nav__ul | max-lg:hidden flex items-center gap-8">
+                <li><a class="relative" href="#home">home</a></li>
+                <li><a class="relative" href="#shop">shop</a></li>
+                <li><a class="relative" href="#about">about</a></li>
+                <li><a class="relative" href="#contact">contact</a></li>
+              </ul>
+            </nav>
+            <!-- mobile nav -->
+            <nav id="mobile-nav" class="lg:hidden hidden">
+              <div class="fixed inset-0 bg-nav-bg">
+                <ul
+                  class="max-lg:absolute top-0 left-0 right-0 py-10 px-5 font-bold flex items-center justify-end gap-8 bg-white text-black"
+                >
+                  <li><a class="nav-link" href="#home">home</a></li>
+                  <li><a class="nav-link" href="#shop">shop</a></li>
+                  <li><a class="nav-link" href="#about">about</a></li>
+                  <li><a class="nav-link" href="#contact">contact</a></li>
+                </ul>
+              </div>
+            </nav>
+          </header>
+
+          <div class="relative h-full overflow-hidden">
+            <img
+              id="hero"
+              class="max-xs:hidden lg:absolute w-full h-full top-0 left-0 transition-transform duration-500 ease-in-out"
+              src="images/desktop-image-hero-1.jpg"
+              alt=""
+            />
+            <img
+              id="mobile-hero"
+              class="max-xs:block hidden"
+              src="images/mobile-image-hero-1.jpg"
+              alt=""
+            />
+          </div>
+
+          <div class="absolute flex bottom-0 -right-[10rem] max-lg:right-0">
+            <button
+              id="left-btn"
+              class="flex p-[1.75rem] max-lg:p-4 items-center justify-center bg-black hover:bg-very-dark-gray active:bg-dark-gray hover:transition-colors hover:duration-300 hover:ease-in-out"
+            >
+              <svg class="icon | size-6 max-lg:size-5">
+                <use xlink:href="images/icons.svg#icon-angle-left"></use>
+              </svg>
+            </button>
+            <button
+              id="right-btn"
+              class="flex p-[1.75rem] max-lg:p-4 items-center justify-center bg-black hover:bg-very-dark-gray active:bg-dark-gray hover:transition-colors hover:duration-300 hover:ease-in-out"
+            >
+              <svg class="icon | size-6 max-lg:size-5">
+                <use
+                  class=""
+                  xlink:href="images/icons.svg#icon-angle-right"
+                ></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          class="col-start-8 col-span-12 pt-28 pb-36 pr-20 pl-[6.25rem] max-lg:py-14 max-lg:px-7 bg-white"
+        >
+          <h1
+            id="title"
+            class="text-[2.75rem] max-lg:text-4xl font-semibold leading-none"
+          >
+            Discover innovative ways to decorate
+          </h1>
+          <p id="description" class="mt-5 text-dark-gray">
+            We provide unmatched quality, comfort, and style for property owners
+            across the country. Our experts combine form and function in
+            bringing your vision to life. Create a room in your own style with
+            our collection and make your property a reflection of you and what
+            you love.
+          </p>
+          <a
+            id="shop"
+            class="link | inline-block mt-3 max-lg:mt-7 uppercase tracking-[.75rem] font-semibold hover:text-dark-gray active:text-very-dark-gray hover:transition-colors hover:duration-300 hover:ease-in-out"
+            href="#"
+            >Shop now
+            <svg
+              class="icon arrow | inline-block size-10 transition-colors duration-300"
+            >
+              <use xlink:href="images/icons.svg#icon-arrow"></use>
+            </svg>
+          </a>
+        </div>
+      </section>
+      <section
+        class="max-container | flex max-lg:grid md:grid-cols-2 max-md:block"
+      >
+        <img class="max-lg:w-full" src="images/image-about-dark.jpg" alt="" />
+
+        <div
+          id="about"
+          class="lg:max-w-[37rem] pt-16 pb-14 pr-10 pl-12 max-lg:pt-12 max-lg:pb-9 max-lg:px-7 col-start-2 bg-white"
+        >
+          <h2 class="max-lg:text-sm uppercase font-bold tracking-[.4rem]">
+            about our furniture
+          </h2>
+          <p class="mt-3 text-dark-gray">
+            Our multifunctional collection blends design and function to suit
+            your individual taste. Make each room unique, or pick a cohesive
+            theme that best express your interests and what inspires you. Find
+            the furniture pieces you need, from traditional to contemporary
+            styles or anything in between. Product specialists are available to
+            help you create your dream space.
+          </p>
+        </div>
+        <img class="max-lg:w-full" src="images/image-about-light.jpg" alt="" />
+      </section>
+    </main>
+    <div class="mt-11 text-white text-center">
+      <p>
+        Challenge by
+        <a
+          class="attribution | relative font-bold"
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          >Frontend Mentor</a
+        >.
+      </p>
+      <p class="mt-2">
+        Coded by
+        <a class="attribution | relative font-bold" href="#">Rommel San Jose</a
+        >.
+      </p>
+    </div>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>

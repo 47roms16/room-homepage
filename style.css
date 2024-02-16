@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .max-container {
+    max-width: 1440px;
+  }
+
+  :is(.link:hover, link:focus-within) .icon.arrow {
+    @apply fill-dark-gray;
+  }
+
+  :is(.link:active) .icon.arrow {
+    @apply fill-very-dark-gray;
+  }
+
+  .nav__ul li a::after,
+  .attribution::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 0.1em;
+    background-color: white;
+    transition: transform 0.3s;
+  }
+
+  .attribution::after {
+    bottom: 0;
+  }
+
+  .nav__ul li a::after,
+  .attribution::after {
+    transform: scale(0);
+  }
+
+  .nav__ul li a:hover::after,
+  .nav__ul li a:focus::after,
+  .attribution:hover::after,
+  .attribution:focus::after {
+    transform: scale(1);
+  }
+
+  /* .nav__ul li a {
+    @apply after:content-[""] after:absolute after:-bottom-3 after:left-0 after:w-full after:h-[.1rem] after:bg-white after:transition-transform after:duration-300 after:scale-0 after:hover:scale-100 after:focus:scale-100;
+  } */
+}
+
+/* || RESET || */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font: inherit;
+}
+
+/* Heading & paragraph */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+p {
+  max-width: 75ch;
+  text-wrap: pretty;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"],
+li {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html {
+  overflow-x: hidden;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  overflow-x: hidden;
+}
+
+/* Elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  display: inline-block;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+    scroll-padding-top: 3rem; /* change depends on sticky header */
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/*  */
+hr {
+  max-width: 100%;
+}
